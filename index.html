@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚔️ Mercador Biruta — Loja de RPG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Game Container -->
+    <div class="game-container">
+        <!-- Left Side - Character -->
+        <div class="character-section">
+            <div class="character-frame">
+                <div class="character-emoji" id="characterEmoji">🧙</div>
+                <div class="character-name">Biruta</div>
+                <div class="character-title">Mercador Misterioso</div>
+            </div>
+            <div class="speech-bubble" id="speechBubble">
+                Bem-vindo, aventureiro! Tenho itens incríveis para você...
+            </div>
+            <button class="negotiate-btn" id="negotiateBtn">Negociar Preço</button>
+        </div>
+
+        <!-- Right Side - Shop -->
+        <div class="shop-section">
+            <div class="shop-header">
+                <div class="shop-title">⚔️ LOJA DE BIRUTA</div>
+                <div class="points-display">
+                    <span>💰</span>
+                    <span id="pointsDisplay">1000</span>
+                </div>
+            </div>
+            <div class="items-container" id="itemsContainer"></div>
+        </div>
+    </div>
+
+    <!-- Dialog Modal -->
+    <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog-box">
+            <div class="dialog-character" id="dialogCharacter">🧙</div>
+            <div class="dialog-text" id="dialogText"></div>
+            <div class="dialog-result" id="dialogResult"></div>
+            <div class="dialog-buttons" id="dialogButtons"></div>
+        </div>
+    </div>
+
+    <!-- Combat Modal -->
+    <div class="combat-overlay" id="combatOverlay">
+        <div class="combat-arena">
+            <div class="combat-title" id="combatTitle">⚔️ COMBATE! ⚔️</div>
+            
+            <div class="combatants">
+                <div class="combatant">
+                    <span class="combatant-emoji" id="playerEmoji">🧙</span>
+                    <div class="combatant-name">Você</div>
+                    <div class="hp-bar">
+                        <div class="hp-fill player" id="playerHpFill" style="width: 100%"></div>
+                    </div>
+                    <div class="hp-text"><span id="playerHp">100</span>/100</div>
+                </div>
+
+                <div class="vs-text">VS</div>
+
+                <div class="combatant">
+                    <span class="combatant-emoji" id="enemyEmoji">👹</span>
+                    <div class="combatant-name" id="enemyName">Inimigo</div>
+                    <div class="hp-bar">
+                        <div class="hp-fill" id="enemyHpFill" style="width: 100%"></div>
+                    </div>
+                    <div class="hp-text"><span id="enemyHp">80</span>/80</div>
+                </div>
+            </div>
+
+            <div class="combat-log" id="combatLog">Prepare-se para o combate!</div>
+            <div class="combat-actions" id="combatActions">
+                <button class="combat-btn attack" id="attackBtn">⚔️ Atacar</button>
+                <button class="combat-btn defend" id="defendBtn">🛡️ Defender</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
